@@ -1,0 +1,95 @@
+
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  width:6px;
+  height:6px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.336);
+}
+.App{
+  background: black;
+  height:100vh;
+  width:100%;
+  position: relative;
+  overflow: hidden;
+}
+.menuBar{
+  position:absolute;
+  top:1.5vw;
+  left:1.5vw;
+  font-size: 2.5vmax;
+  border:none;
+  color:darkred;
+  background: transparent;
+  cursor: pointer;
+  z-index: 5;
+  font-family:'Roboto', sans-serif;
+  font-style: oblique;
+  transition: all 0.3s ease-in-out;
+}
+.menuBar::after{
+  content:"MENU";
+}
+.menuBar:hover{
+  padding-top: 0.2%;
+  padding-left:0.5%;
+  text-shadow: 0.1vw 0.1vw 0.5vw rgb(243, 201, 201),-0.1vw -0.1vw 0.5vw black ;
+}
+.themeButton{
+  position: absolute;
+  top:1.8vw;
+  right:1.5vw;
+  width:3vmax;
+  height:3vmax;
+  border-radius: 1.5vmax;
+  background: transparent;
+  font-size:1.5vmax;
+  border: 2px solid #48f3d1;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.themeButton:hover{
+  margin-top: 0.2%;
+  margin-right:0.3%;
+ box-shadow: 2px 2px 15px black,-2px -2px 15px black;
+}
+@media only screen and (max-width: 1100px){
+  .menuBar{
+    top:2%;
+    left:2%;
+    font-size: 6vmin;
+  }
+  .themeButton{
+    top:3%;
+    right:2%;
+    width:min-content;
+    height: min-content;
+    font-size: 4vmin;
+    border-radius: 6vmin;
+  }
+
+}
+@media only screen and (max-width: 768px){
+ 
+   .menuBar{
+     top:1.5vw;
+     left:1.5vw;
+     font-size: 8vmin;
+     font-style: normal;
+   }
+   .menuBar::after{
+     content:"";
+   }
+   .themeButton{
+     font-size: 5vmin;
+     
+   }
+}
